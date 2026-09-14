@@ -1,0 +1,36 @@
+# Секреты и конфигурация
+.env
+.env.local
+*.env
+
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+
+# Артефакты сборки
+build/
+dist/
+*.whl
+
+# Логи
+*.log
+logs/
+
+# IDE и ОС
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Прочее
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

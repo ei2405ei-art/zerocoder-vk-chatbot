@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zerocoder-vk-chatbot"
+version = "1.0.0"
+description = "AI-консультант для сообщества ВКонтакте: отвечает на вопросы пользователей через OpenAI-совместимый API (ProxyAPI)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["vk", "chatbot", "telegram", "openai", "proxyapi", "rassist", "zerocoder"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Communications :: Chat",
+]
+
+dependencies = [
+    "openai>=1.30.0",
+    "vk-api>=11.9.9",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+]
+
+[project.scripts]
+zerocoder-bot = "zerocoder_vk_bot.bot:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+zerocoder_vk_bot = ["py.typed"]
